@@ -1,0 +1,40 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+.idea_modules/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Java / Maven
+target/
+*.log
+hs_err_pid*
+
+# Spring Boot devtools
+.spring-boot-devtools.properties
+
+# Environment files
+.env
+*.env
+
+# Logs
+logs/
+*.log
+
+# Docker
+**/app.jar
+docker-compose.override.yml
+
+# Local build artifacts
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Optional IDE config
+.vscode/
+
+# PostgreSQL docker volume (if bound locally)
+pgdata/
