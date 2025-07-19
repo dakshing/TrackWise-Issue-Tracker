@@ -1,0 +1,5 @@
+- connect to postgres from local terminal
+psql -h localhost -p 5432 -U trackwise_user -d trackwise_db
+
+swagger url
+http://localhost:8081/swagger-ui/index.html
