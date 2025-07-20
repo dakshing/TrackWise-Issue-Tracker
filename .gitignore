@@ -38,3 +38,4 @@ build/
 
 # PostgreSQL docker volume (if bound locally)
 pgdata/
+/.idea/

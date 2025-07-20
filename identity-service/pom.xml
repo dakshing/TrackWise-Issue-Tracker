@@ -10,21 +10,14 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>ticket-service</artifactId>
-    <name>TrackWise Ticket Service</name>
-    <description>Handles ticket creation, assignment, SLA and updates</description>
+    <artifactId>identity-service</artifactId>
+    <name>TrackWise Identity Service</name>
+    <description>User Identity and Token Management Service</description>
 
     <dependencies>
-        <!-- Core Spring Boot dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <!-- Spring Security -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
         <!-- Spring Data JPA -->
@@ -33,18 +26,23 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
-        <!-- Validation -->
+        <!-- Spring Validation -->
         <dependency>
             <groupId>jakarta.validation</groupId>
             <artifactId>jakarta.validation-api</artifactId>
-            <version>3.0.2</version>
         </dependency>
 
-        <!-- Postgres driver -->
+        <!-- Spring security -->
         <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.7.7</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <!-- trackwise common util package -->
+        <dependency>
+            <groupId>com.trackwise</groupId>
+            <artifactId>trackwise-common</artifactId>
+            <version>1.0.0</version>
         </dependency>
 
         <!-- Lombok -->
@@ -56,16 +54,8 @@
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
-            <artifactId>lombok-mapstruct-binding</artifactId>
-            <version>0.2.0</version>
-        </dependency>
-
-
-        <!-- Mapstruct -->
-        <dependency>
-            <groupId>org.mapstruct</groupId>
-            <artifactId>mapstruct</artifactId>
-            <version>1.5.5.Final</version>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
         </dependency>
 
         <!-- Swagger -->
@@ -74,11 +64,12 @@
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
             <version>2.2.0</version>
         </dependency>
+
+        <!-- postgres -->
         <dependency>
-            <groupId>com.trackwise</groupId>
-            <artifactId>trackwise-common</artifactId>
-            <version>1.0.0</version>
-            <scope>compile</scope>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.7</version>
         </dependency>
     </dependencies>
 

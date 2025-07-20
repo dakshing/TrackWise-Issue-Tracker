@@ -13,7 +13,9 @@
     <description>Parent POM for all backend services</description>
 
     <modules>
+        <module>trackwise-common</module>
         <module>ticket-service</module>
+        <module>identity-service</module>
     </modules>
 
     <properties>

@@ -32,6 +32,23 @@ services:
     networks:
       - trackwise-net
 
+  identity-service:
+    build:
+      context: .
+      dockerfile: identity-service/Dockerfile
+    container_name: trackwise-identity
+    ports:
+      - "8082:8082"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/trackwise_db
+      SPRING_DATASOURCE_USERNAME: trackwise_user
+      SPRING_DATASOURCE_PASSWORD: trackwise_pass
+      JWT_SECRET: your-very-secure-secret-key-should-be-32-bytes
+    depends_on:
+      - postgres
+    networks:
+      - trackwise-net
+
 volumes:
   postgres_data:
 
